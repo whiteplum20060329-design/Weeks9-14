@@ -17,7 +17,7 @@ public class mover : MonoBehaviour
         transform.position += (Vector3)moveway* speed * Time.deltaTime;
     }
 
-    public void Move(InputAction.CallbackContext context)
+    public void Moveitem(InputAction.CallbackContext context)
     {
         moveway= context.ReadValue<Vector2>();
     }
