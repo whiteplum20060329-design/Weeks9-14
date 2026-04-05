@@ -61,6 +61,7 @@ public class hoe : MonoBehaviour
                 placedPositions.Add(transform.position);
                 // If all checks pass, a new land tile is instantiated.
                 // The position is then added to the list for future validation.
+                //
             }
 
 
