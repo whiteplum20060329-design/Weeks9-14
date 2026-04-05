@@ -7,11 +7,12 @@ public class toolsystem : MonoBehaviour
 
     // This array stores all tool GameObjects such as hoe, watering , seed bag.
     // Tool switching is done by set active these objects
-    private int toollist = 0;
+    public int toollist = 0;
     public Transform toolpos;
     public Vector3 mousepos;
 
     public hoe hoe;
+  public bool useSeed = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,11 +52,12 @@ public class toolsystem : MonoBehaviour
             }
             else if (toollist == 1)
             {
-                
+
+                useSeed = true;//set it to true so can check the plantgrow event
             }
             else if (toollist == 2)
             {
-               
+                useSeed = true;
             }
             else if (toollist == 3)
             {

@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Tilemaps;
 
 public class hoe : MonoBehaviour
@@ -14,6 +15,8 @@ public class hoe : MonoBehaviour
     public GameObject Prefab;
     public SpriteRenderer skyspriteRenderer;
     public List<Vector3> placedPositions;
+    public toolsystem toolsystems;
+    public UnityEvent UnityEvent;
 
 
 
@@ -57,6 +60,18 @@ public class hoe : MonoBehaviour
             if (canPlace == true)
             {
                 GameObject land = Instantiate(Prefab, transform.position, Quaternion.identity);
+
+                ground ground = land.GetComponent<ground>();
+                // Get the ground script from the newly created land object
+
+
+                ground.toolsystem = toolsystems;
+                // Pass the toolsystem reference to the new land tile
+                // so it can check which tool is being used and the tool position
+
+                ground.plantgrow = UnityEvent;
+                // pass the UnityEvent to the new land tile
+                // This allows the land tile to trigger planting behaviour
 
                 placedPositions.Add(transform.position);
                 // If all checks pass, a new land tile is instantiated.
