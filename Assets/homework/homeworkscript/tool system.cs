@@ -14,7 +14,8 @@ public class toolsystem : MonoBehaviour
     public hoe hoe;
   public bool useSeed = false;
     public bool usewater = false;
-   
+    public AudioSource audioSource;
+    public AudioSource audioSource2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,28 +48,33 @@ public class toolsystem : MonoBehaviour
         if (context.performed)
         {
             usewater = false;
-          
+            
+
             if (toollist == 0)
             {
                 hoe.hoetool();
                 usewater = false;
+                audioSource.Play();
                 // Reference to the hoe script, used to trigger the hoe action.
                 // When the current tool is the hoe, this reference is used to call its function.
             }
             else if (toollist == 1)
             {
                 usewater = false;
+                audioSource.Play();
                 useSeed = true;//set it to true so can check the plantgrow event
             }
             else if (toollist == 2)
             {
                 useSeed = true;
                 usewater = false;
+                audioSource.Play();
             }
             else if (toollist == 3)
             {
                 usewater = true;
-              
+                audioSource.Play();
+
 
 
             }
@@ -91,6 +97,7 @@ public class toolsystem : MonoBehaviour
         // When exceeding the array length, it resets to 0 to create a loop.
         if (context.performed)
         {
+            audioSource2.Play();
             usewater = false;
             toollist++;   
             Debug.Log(toollist);
