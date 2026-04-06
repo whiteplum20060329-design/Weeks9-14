@@ -3594,8 +3594,8 @@ GameObject:
   - component: {fileID: 1938698204}
   - component: {fileID: 1938698203}
   - component: {fileID: 1938698202}
-  - component: {fileID: 1938698206}
   - component: {fileID: 1938698205}
+  - component: {fileID: 1938698206}
   m_Layer: 0
   m_Name: just  cat
   m_TagString: Untagged
@@ -3809,9 +3809,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c515148d1fb0ce34eafc9e829adb1e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playercat
-  audioSource: {fileID: 1938698205}
+  audioSource: {fileID: 0}
   speed: 0
-  Animator: {fileID: 1938698202}
+  Animator: {fileID: 0}
   x: 0
   y: 0
 --- !u!1 &1984642148

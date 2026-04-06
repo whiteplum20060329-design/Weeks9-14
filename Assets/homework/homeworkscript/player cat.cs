@@ -41,5 +41,4 @@ public class playercat : MonoBehaviour
     {
         audioSource.Play();
     }
-
-}
+    }
