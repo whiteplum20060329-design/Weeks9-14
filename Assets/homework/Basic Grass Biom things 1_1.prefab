@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5706145023916858542}
   - component: {fileID: 2255933534269507099}
+  - component: {fileID: 2807617150964757319}
   m_Layer: 0
   m_Name: Basic Grass Biom things 1_1
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 6, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,3 +93,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2807617150964757319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9158741308736970324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b91838b96daeb45a2f8ab2fc9be0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::plantgrow
+  growCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 29.67127
+      outSlope: 29.67127
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.34135067
+      value: 10.128308
+      inSlope: 29.67127
+      outSlope: 29.67127
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 10
+  progress: 0
+  seedsprite: {fileID: -8734847783331180309, guid: 2fa7d946ec409f240abcc4433fab3757,
+    type: 3}
+  growsprite: {fileID: 9133669012376425949, guid: 2fa7d946ec409f240abcc4433fab3757,
+    type: 3}
+  isWatering: 0
+  toolsystem: {fileID: 0}

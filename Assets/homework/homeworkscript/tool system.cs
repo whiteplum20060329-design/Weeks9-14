@@ -13,6 +13,8 @@ public class toolsystem : MonoBehaviour
 
     public hoe hoe;
   public bool useSeed = false;
+    public bool usewater = false;
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,29 +46,33 @@ public class toolsystem : MonoBehaviour
     {
         if (context.performed)
         {
+            usewater = false;
+          
             if (toollist == 0)
             {
                 hoe.hoetool();
+                usewater = false;
                 // Reference to the hoe script, used to trigger the hoe action.
                 // When the current tool is the hoe, this reference is used to call its function.
             }
             else if (toollist == 1)
             {
-
+                usewater = false;
                 useSeed = true;//set it to true so can check the plantgrow event
             }
             else if (toollist == 2)
             {
                 useSeed = true;
+                usewater = false;
             }
             else if (toollist == 3)
             {
+                usewater = true;
+              
+
 
             }
-            else if (toollist == 4)
-            {
-
-            }
+          
         }
     }
 
@@ -85,7 +91,7 @@ public class toolsystem : MonoBehaviour
         // When exceeding the array length, it resets to 0 to create a loop.
         if (context.performed)
         {
-
+            usewater = false;
             toollist++;   
             Debug.Log(toollist);
 

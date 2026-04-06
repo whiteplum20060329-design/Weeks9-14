@@ -3,7 +3,8 @@ using UnityEngine;
 public class seedbag2 : MonoBehaviour
 {
     public GameObject appleseed;
-    public toolsystem toolsystem;
+    public toolsystem toolsystems;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,9 +19,15 @@ public class seedbag2 : MonoBehaviour
 
     public void apple()
     {
-        if (toolsystem.toollist == 2)
+        if (toolsystems.toollist == 2)
         {
-            Instantiate(appleseed, transform.position, Quaternion.identity);
+           GameObject apple = Instantiate(appleseed, transform.position, Quaternion.identity);
+
+            plantgrow plantgrow = apple.GetComponent<plantgrow>();
+
+
+            plantgrow.toolsystem = toolsystems;
+
         }
     }
 }

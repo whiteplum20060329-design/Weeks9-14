@@ -1,9 +1,14 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class seedbag : MonoBehaviour
 {
     public GameObject sunflowerseed;
-    public toolsystem toolsystem;
+    public toolsystem toolsystems;
+
+   
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,9 +23,22 @@ public class seedbag : MonoBehaviour
 
     public void sunflower()
     {
-        if (toolsystem.toollist == 1)
+        if (toolsystems.toollist == 1)
         {
-            Instantiate(sunflowerseed, transform.position, Quaternion.identity);
+           GameObject sunflower = Instantiate(sunflowerseed, transform.position, Quaternion.identity);
+           
+            plantgrow plantgrow = sunflower.GetComponent<plantgrow>();
+
+
+            plantgrow.toolsystem = toolsystems;
+            
+        
+
+           
+            
+           
+
+
         }
     }
 }

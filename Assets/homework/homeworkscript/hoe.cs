@@ -18,6 +18,8 @@ public class hoe : MonoBehaviour
     public toolsystem toolsystems;
     public UnityEvent UnityEvent;
 
+    public UnityEvent Unity2;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
